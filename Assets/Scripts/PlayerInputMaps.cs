@@ -28,9 +28,9 @@ public partial class @PlayerInputMaps: IInputActionCollection2, IDisposable
             ""id"": ""48bdfdcf-4f68-4f65-8779-ae863946c78b"",
             ""actions"": [
                 {
-                    ""name"": ""Movement_keyboard"",
+                    ""name"": ""Movement_Walking"",
                     ""type"": ""Value"",
-                    ""id"": ""7aafe1a0-7497-46c9-a24c-04ecffd03ca4"",
+                    ""id"": ""a8dbe290-95a9-43e0-82d1-28553620131f"",
                     ""expectedControlType"": ""Vector3"",
                     ""processors"": """",
                     ""interactions"": """",
@@ -39,156 +39,57 @@ public partial class @PlayerInputMaps: IInputActionCollection2, IDisposable
             ],
             ""bindings"": [
                 {
-                    ""name"": ""ArrowMovement"",
-                    ""id"": ""800c7f2d-4e58-4000-932d-f6f6c1c4e03d"",
+                    ""name"": ""ArrowKeys"",
+                    ""id"": ""2d541c3b-d2bf-4eab-814a-9d1ab01685aa"",
                     ""path"": ""3DVector"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Movement_keyboard"",
+                    ""action"": ""Movement_Walking"",
                     ""isComposite"": true,
                     ""isPartOfComposite"": false
                 },
                 {
-                    ""name"": ""up"",
-                    ""id"": ""df1befa0-0128-4bc9-a06c-22c72857cbf5"",
-                    ""path"": ""<Keyboard>/space"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Movement_keyboard"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": ""down"",
-                    ""id"": ""c42eac5b-478d-48d3-b07a-2c8b219a0d0c"",
-                    ""path"": ""<Keyboard>/leftShift"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Movement_keyboard"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
                     ""name"": ""left"",
-                    ""id"": ""12cdba42-8f4e-450e-bbc6-7ce50d7d9621"",
+                    ""id"": ""3958c754-d6c4-47d5-a927-c93f7c351a58"",
                     ""path"": ""<Keyboard>/leftArrow"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Movement_keyboard"",
+                    ""groups"": ""Keyboard"",
+                    ""action"": ""Movement_Walking"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
                 {
                     ""name"": ""right"",
-                    ""id"": ""b3b1f49c-343f-46dc-af06-e51ef73d046c"",
+                    ""id"": ""db3e5349-a20e-4d7a-8d73-51961a3a5ca0"",
                     ""path"": ""<Keyboard>/rightArrow"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Movement_keyboard"",
+                    ""groups"": ""Keyboard"",
+                    ""action"": ""Movement_Walking"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
                 {
                     ""name"": ""forward"",
-                    ""id"": ""c69d50a8-db04-4565-ad65-41add4068175"",
+                    ""id"": ""14e99ad5-92c4-4684-9d3f-73bb14418973"",
                     ""path"": ""<Keyboard>/upArrow"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Movement_keyboard"",
+                    ""groups"": ""Keyboard"",
+                    ""action"": ""Movement_Walking"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
                 {
                     ""name"": ""backward"",
-                    ""id"": ""dfdf2f75-aaba-4887-8330-29296597655b"",
+                    ""id"": ""7f57272a-799e-4c63-86a0-a46b32f123ae"",
                     ""path"": ""<Keyboard>/downArrow"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Movement_keyboard"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": ""WASD_Movement"",
-                    ""id"": ""4718a64b-9abc-499d-9962-49be878d9e92"",
-                    ""path"": ""3DVector"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Movement_keyboard"",
-                    ""isComposite"": true,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": ""up"",
-                    ""id"": ""545d3b52-4ac7-44c5-a529-028aeabe99a1"",
-                    ""path"": ""<Keyboard>/space"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Movement_keyboard"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": ""down"",
-                    ""id"": ""bdeee418-e7da-4565-b3ea-90c567df6e12"",
-                    ""path"": ""<Keyboard>/leftShift"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Movement_keyboard"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": ""left"",
-                    ""id"": ""d9d1678d-7b61-45c9-9055-243db7b21041"",
-                    ""path"": ""<Keyboard>/a"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Movement_keyboard"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": ""right"",
-                    ""id"": ""de7f4fbc-05c1-40c4-9e19-09edd3c2b17f"",
-                    ""path"": ""<Keyboard>/d"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Movement_keyboard"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": ""forward"",
-                    ""id"": ""6f81ccd8-3a5c-42fc-8bd4-793f722012e2"",
-                    ""path"": ""<Keyboard>/w"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Movement_keyboard"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": ""backward"",
-                    ""id"": ""defa3eaa-8411-4d8a-92a4-c4a56d54f661"",
-                    ""path"": ""<Keyboard>/s"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Movement_keyboard"",
+                    ""groups"": ""Keyboard"",
+                    ""action"": ""Movement_Walking"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 }
@@ -211,7 +112,7 @@ public partial class @PlayerInputMaps: IInputActionCollection2, IDisposable
 }");
         // Player
         m_Player = asset.FindActionMap("Player", throwIfNotFound: true);
-        m_Player_Movement_keyboard = m_Player.FindAction("Movement_keyboard", throwIfNotFound: true);
+        m_Player_Movement_Walking = m_Player.FindAction("Movement_Walking", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -273,12 +174,12 @@ public partial class @PlayerInputMaps: IInputActionCollection2, IDisposable
     // Player
     private readonly InputActionMap m_Player;
     private List<IPlayerActions> m_PlayerActionsCallbackInterfaces = new List<IPlayerActions>();
-    private readonly InputAction m_Player_Movement_keyboard;
+    private readonly InputAction m_Player_Movement_Walking;
     public struct PlayerActions
     {
         private @PlayerInputMaps m_Wrapper;
         public PlayerActions(@PlayerInputMaps wrapper) { m_Wrapper = wrapper; }
-        public InputAction @Movement_keyboard => m_Wrapper.m_Player_Movement_keyboard;
+        public InputAction @Movement_Walking => m_Wrapper.m_Player_Movement_Walking;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -288,16 +189,16 @@ public partial class @PlayerInputMaps: IInputActionCollection2, IDisposable
         {
             if (instance == null || m_Wrapper.m_PlayerActionsCallbackInterfaces.Contains(instance)) return;
             m_Wrapper.m_PlayerActionsCallbackInterfaces.Add(instance);
-            @Movement_keyboard.started += instance.OnMovement_keyboard;
-            @Movement_keyboard.performed += instance.OnMovement_keyboard;
-            @Movement_keyboard.canceled += instance.OnMovement_keyboard;
+            @Movement_Walking.started += instance.OnMovement_Walking;
+            @Movement_Walking.performed += instance.OnMovement_Walking;
+            @Movement_Walking.canceled += instance.OnMovement_Walking;
         }
 
         private void UnregisterCallbacks(IPlayerActions instance)
         {
-            @Movement_keyboard.started -= instance.OnMovement_keyboard;
-            @Movement_keyboard.performed -= instance.OnMovement_keyboard;
-            @Movement_keyboard.canceled -= instance.OnMovement_keyboard;
+            @Movement_Walking.started -= instance.OnMovement_Walking;
+            @Movement_Walking.performed -= instance.OnMovement_Walking;
+            @Movement_Walking.canceled -= instance.OnMovement_Walking;
         }
 
         public void RemoveCallbacks(IPlayerActions instance)
@@ -326,6 +227,6 @@ public partial class @PlayerInputMaps: IInputActionCollection2, IDisposable
     }
     public interface IPlayerActions
     {
-        void OnMovement_keyboard(InputAction.CallbackContext context);
+        void OnMovement_Walking(InputAction.CallbackContext context);
     }
 }
