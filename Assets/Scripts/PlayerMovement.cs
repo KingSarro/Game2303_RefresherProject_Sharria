@@ -7,11 +7,13 @@ public class PlayerMovement : MonoBehaviour{
 
     //Getting a reference of the rigid body
     private Rigidbody rb;
+    [SerializeField] private float gravity = -5f;
 
     //Variables the movement 
-    private Vector3 movement;
-    [SerializeField] private int moveSpeed;
-    [SerializeField] private int jumpStrength;
+    private Vector3 movementWalk;
+    private Vector3 movementJump;
+    [SerializeField] private float moveSpeed;
+    [SerializeField] private float jumpStrength;
 
     private void OnEnable(){
         //Enable the player input
@@ -34,22 +36,32 @@ public class PlayerMovement : MonoBehaviour{
         //subscribing methods to the playerInput
         playerInput.Player.Movement_Walking.performed += OnMovementPerformed;
         playerInput.Player.Movement_Walking.canceled += OnMovementCanceled;
+        playerInput.Player.Movement_Jump.started += OnJumpPerformed;
     }
 
     private void FixedUpdate(){
+        //Applying gravity
+
         //Move the player around 
-        rb.velocity = movement * moveSpeed;
+        rb.velocity += new Vector3(movementWalk.x, (5 * movementJump.y) + Physics.gravity.y, movementWalk.z);
     }
 
 
 
-
+    //---Methods meant to track the player's movement---//
+    //This method will be called when the player is pressing a movement key;
     private void OnMovementPerformed(InputAction.CallbackContext ctx){
         //Setting movement to the value of ctx
-        movement = ctx.ReadValue<Vector3>();
+        movementWalk = ctx.ReadValue<Vector3>();
     }
+    //This method will be called when the player releases all/any of the movement keys
     private void OnMovementCanceled(InputAction.CallbackContext ctx){
         //Setting movement to zero when no movement is detected
-        movement = Vector3.zero;
+        movementWalk = Vector3.zero;
+    }
+    //This method will be called when the player presses the space bar
+    private void OnJumpPerformed(InputAction.CallbackContext ctx){
+        //Jumping when the jump button is pressed
+        rb.AddForce(Vector3.up * jumpStrength, ForceMode.Impulse);
     }
 }
