@@ -7,11 +7,9 @@ public class PlayerMovement : MonoBehaviour{
 
     //Getting a reference of the rigid body
     private Rigidbody rb;
-    [SerializeField] private float gravity = -5f;
 
     //Variables the movement 
     private Vector3 movementWalk;
-    private Vector3 movementJump;
     [SerializeField] private float moveSpeed;
     [SerializeField] private float jumpStrength;
 
@@ -43,7 +41,8 @@ public class PlayerMovement : MonoBehaviour{
         //Applying gravity
 
         //Move the player around 
-        rb.velocity += new Vector3(movementWalk.x, (5 * movementJump.y) + Physics.gravity.y, movementWalk.z);
+        rb.velocity += movementWalk;
+        //! Or rb.velocity = new Vector3(movementWalk.x, rb.velocity.y, movementWalk.z)
     }
 
 
@@ -62,6 +61,7 @@ public class PlayerMovement : MonoBehaviour{
     //This method will be called when the player presses the space bar
     private void OnJumpPerformed(InputAction.CallbackContext ctx){
         //Jumping when the jump button is pressed
+        //movementJump = 1 * jumpStrength;
         rb.AddForce(Vector3.up * jumpStrength, ForceMode.Impulse);
     }
 }
