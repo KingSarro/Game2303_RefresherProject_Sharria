@@ -65,4 +65,12 @@ public class PlayerMovement : MonoBehaviour{
         //movementJump = 1 * jumpStrength;
         rb.AddForce(Vector3.up * jumpStrength, ForceMode.Impulse);
     }
+
+    public PlayerInputMaps getInputMap(){
+        return playerInput;
+    }
+
+    public float getMovement(){
+        return movementWalk.x + movementWalk.z;
+    }
 }
