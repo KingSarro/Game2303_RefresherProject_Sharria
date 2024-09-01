@@ -41,7 +41,7 @@ public class PlayerMovement : MonoBehaviour{
         //Applying gravity
 
         //Move the player around 
-        rb.velocity += movementWalk;
+        rb.velocity += movementWalk.normalized * moveSpeed;
         //! Or
         //rb.velocity = new Vector3(movementWalk.x, rb.velocity.y, movementWalk.z);
     }
@@ -71,6 +71,6 @@ public class PlayerMovement : MonoBehaviour{
     }
 
     public float getMovement(){
-        return movementWalk.x + movementWalk.z;
+        return Mathf.Clamp01( Mathf.Abs(rb.velocity.x) + Mathf.Abs(rb.velocity.z) );
     }
 }
