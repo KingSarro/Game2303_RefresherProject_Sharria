@@ -42,7 +42,8 @@ public class PlayerMovement : MonoBehaviour{
 
         //Move the player around 
         rb.velocity += movementWalk;
-        //! Or rb.velocity = new Vector3(movementWalk.x, rb.velocity.y, movementWalk.z)
+        //! Or
+        //rb.velocity = new Vector3(movementWalk.x, rb.velocity.y, movementWalk.z);
     }
 
 
