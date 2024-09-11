@@ -50,8 +50,8 @@ public class PlayerMovement : MonoBehaviour{
 
         //transform.Rotate(transform.rotation.x, movementWalk.x, transform.rotation.z);
         if (movementWalk != Vector3.zero){
-            Quaternion qToRotation = Quaternion.LookRotation(movementWalk, Vector3.up);
-            transform.rotation = Quaternion.RotateTowards(transform.rotation, qToRotation, moveSpeed);
+            //Quaternion qToRotation = Quaternion.LookRotation(movementWalk, Vector3.up);
+            //transform.rotation = Quaternion.RotateTowards(transform.rotation, qToRotation, moveSpeed);
         }
     }
 
