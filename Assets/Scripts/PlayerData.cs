@@ -1,23 +1,26 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.ComponentModel;
+using Unity.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class PlayerData : MonoBehaviour{
     [SerializeField] PlayerStats health;
+    [SerializeField] private Image statBar;
 
-    private int maxHealth;
-    private int currentHealth;
+    [SerializeField] private int maxHealth;
+    [SerializeField] private int currentHealth;
 
     private void Start(){
         maxHealth = health.getMaxStat();
         currentHealth = maxHealth;
     }
     private void Update(){
-        health.getStatBar().fillAmount = currentHealth / maxHealth;
+        statBar.fillAmount = currentHealth / maxHealth;
     }
 
-    private void setHealth(int damageAmount){
+    public void SetHealth(int damageAmount){
         currentHealth = Mathf.Clamp( (currentHealth - damageAmount) , 0, maxHealth);
     }
 }

@@ -7,7 +7,7 @@ using UnityEngine;
 public class PlayerStats : ScriptableObject{
     [SerializeField] private int maxStat;
     [SerializeField] private int currentStat;
-    [SerializeField] private Image statBar;
+    
 
 
     public int getMaxStat(){
@@ -17,7 +17,5 @@ public class PlayerStats : ScriptableObject{
         return currentStat;
     }
 
-    public Image getStatBar(){
-        return statBar;
-    }
+    
 }
