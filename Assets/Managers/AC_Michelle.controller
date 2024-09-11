@@ -9,7 +9,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 3
-    m_ConditionEvent: moveSpeed
+    m_ConditionEvent: walkMovement
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 5540755792851183562}
@@ -34,7 +34,7 @@ AnimatorController:
   m_Name: AC_Michelle
   serializedVersion: 5
   m_AnimatorParameters:
-  - m_Name: moveSpeed
+  - m_Name: walkMovement
     m_Type: 1
     m_DefaultFloat: 0
     m_DefaultInt: 0
@@ -141,7 +141,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 4
-    m_ConditionEvent: moveSpeed
+    m_ConditionEvent: walkMovement
     m_EventTreshold: 0.1
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1126890110118665015}

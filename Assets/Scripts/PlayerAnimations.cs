@@ -19,6 +19,6 @@ public class PlayerAnimations : MonoBehaviour{
 
     // Update is called once per frame
     void Update(){
-        animator.SetFloat("moveSpeed", playerMovement.getMovement());
+        animator.SetFloat("walkMovement", playerMovement.getMovement());
     }
 }

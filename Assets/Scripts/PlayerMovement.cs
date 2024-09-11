@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -12,6 +13,8 @@ public class PlayerMovement : MonoBehaviour{
     private Vector3 movementWalk;
     [SerializeField] private float moveSpeed;
     [SerializeField] private float jumpStrength;
+
+    private Quaternion q;
 
     private void OnEnable(){
         //Enable the player input
@@ -44,6 +47,12 @@ public class PlayerMovement : MonoBehaviour{
         //rb.velocity += movementWalk.normalized * moveSpeed;
         //! Or
         rb.velocity = new Vector3(movementWalk.x, rb.velocity.y, movementWalk.z);
+
+        //transform.Rotate(transform.rotation.x, movementWalk.x, transform.rotation.z);
+        if (movementWalk != Vector3.zero){
+            Quaternion qToRotation = Quaternion.LookRotation(movementWalk, Vector3.up);
+            transform.rotation = Quaternion.RotateTowards(transform.rotation, qToRotation, moveSpeed);
+        }
     }
 
 
@@ -71,6 +80,6 @@ public class PlayerMovement : MonoBehaviour{
     }
 
     public float getMovement(){
-        return Mathf.Clamp01( Mathf.Abs(rb.velocity.x) + Mathf.Abs(rb.velocity.z) );
+        return Mathf.Clamp01( Mathf.Abs(movementWalk.x) + Mathf.Abs(movementWalk.z) );
     }
 }
