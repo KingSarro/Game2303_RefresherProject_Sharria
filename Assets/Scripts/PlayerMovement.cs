@@ -41,9 +41,9 @@ public class PlayerMovement : MonoBehaviour{
         //Applying gravity
 
         //Move the player around 
-        rb.velocity += movementWalk.normalized * moveSpeed;
+        //rb.velocity += movementWalk.normalized * moveSpeed;
         //! Or
-        //rb.velocity = new Vector3(movementWalk.x, rb.velocity.y, movementWalk.z);
+        rb.velocity = new Vector3(movementWalk.x, rb.velocity.y, movementWalk.z);
     }
 
 
