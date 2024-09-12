@@ -6,6 +6,7 @@ using UnityEngine.InputSystem;
 public class PlayerAnimations : MonoBehaviour{
 
     //Create Reference for an animation controller
+    [SerializeField] private CharacterAnimations playerAnimList;
     [SerializeField] private Animator animator;
     //Create reference to player movement script
     private PlayerMovement playerMovement;
@@ -19,6 +20,7 @@ public class PlayerAnimations : MonoBehaviour{
 
     // Update is called once per frame
     void Update(){
+        
         animator.SetFloat("walkMovement", playerMovement.getMovement());
     }
 }

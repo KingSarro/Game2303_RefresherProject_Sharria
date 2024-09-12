@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eda2f94571b6ef74183e836f9867d7f8, type: 3}
+  m_Name: PlayerAnimations
+  m_EditorClassIdentifier: 
+  idle: {fileID: -203655887218126122, guid: 4d3c32d0dd15df74f89c7bfe07edb44a, type: 3}
+  walk: {fileID: -203655887218126122, guid: d09b826f42e889544beb49ba41aa288f, type: 3}
+  run: {fileID: -203655887218126122, guid: 428905607cdd5f144a422b035c25121e, type: 3}
+  fall: {fileID: -203655887218126122, guid: b522bebf8aabe264eb02a9de3bed1db9, type: 3}
+  jump: {fileID: -203655887218126122, guid: e0ad1d84a9c5c214bb2ced17ed93f604, type: 3}

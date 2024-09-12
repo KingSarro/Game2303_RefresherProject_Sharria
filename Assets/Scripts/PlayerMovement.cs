@@ -3,6 +3,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class PlayerMovement : MonoBehaviour{
+    [SerializeField] private PlayerAnimations playerAnimations;
     //Creating a new instance of PlayerInputMaps to handle player input
     private PlayerInputMaps playerInput;
 
@@ -52,8 +53,8 @@ public class PlayerMovement : MonoBehaviour{
         if (movementWalk != Vector3.zero){
 
             //transform.forward = movementWalk;
-            //Quaternion qToRotation = Quaternion.LookRotation(movementWalk, Vector3.up);
-            //transform.rotation = Quaternion.Slerp(transform.rotation, qToRotation, moveSpeed * Time.deltaTime);
+            Quaternion qToRotation = Quaternion.LookRotation(movementWalk + transform.position, Vector3.up);
+            transform.rotation = Quaternion.Slerp(transform.rotation, qToRotation, moveSpeed * Time.deltaTime);
         }
     }
 
