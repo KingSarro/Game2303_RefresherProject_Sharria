@@ -5,16 +5,23 @@ using UnityEngine;
 
 [CreateAssetMenu(fileName = "PlayerStats", menuName = "ScriptableObjects/Player/DepletableStat")]
 public class PlayerStats : ScriptableObject{
-    [SerializeField] private int maxStat;
-    [SerializeField] private int currentStat;
+    [SerializeField] private float maxStat;
+    [SerializeField] private float currentStat;
     
 
 
-    public int getMaxStat(){
+    public float getMaxStat(){
         return maxStat;
     }
-    public int getCurrentStat(){
+    public float getCurrentStat(){
         return currentStat;
+    }
+
+    public void setMaxStat(float mStat){
+        maxStat = mStat;
+    }
+    public void setCurrentStat(float cStat){
+        currentStat = cStat;
     }
 
     

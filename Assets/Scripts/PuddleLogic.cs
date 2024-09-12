@@ -14,6 +14,7 @@ public class PuddleLogic : MonoBehaviour{
     private void OnTriggerEnter(Collider other) {
         if(other.gameObject.GetComponent<PlayerMovement>() != null){
             if (other.GetComponent<PlayerData>() == true){
+                Debug.Log("Player enters puddle");
                 pData = other.GetComponent<PlayerData>();
 
                 //isInCorotine = true;
@@ -27,16 +28,17 @@ public class PuddleLogic : MonoBehaviour{
     private void OnTriggerExit(Collider other) {
         if(other.gameObject.GetComponent<PlayerMovement>() != null){
             if (other.GetComponent<PlayerData>() == true){
+                Debug.Log("Player exits puddle");
                 pData = null;
                 //isInCorotine = false;
                 playerInTrigger = false;
-                Debug.Log("In Routine : " + Time.time);
             }
         }
     }
 
     private IEnumerator DamageOverTime(PlayerData player) {
         while(playerInTrigger == true){
+            //Debug.Log("In Routine of object " + gameObject.name + ": "+ Time.time);
             yield return new WaitForSeconds(2f);
             player?.SetHealth(damageAmount);
         }

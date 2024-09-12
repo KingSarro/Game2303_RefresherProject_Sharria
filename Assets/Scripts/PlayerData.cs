@@ -6,21 +6,23 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class PlayerData : MonoBehaviour{
-    [SerializeField] PlayerStats health;
+    [SerializeField] private PlayerStats health;
     [SerializeField] private Image statBar;
 
-    [SerializeField] private int maxHealth;
-    [SerializeField] private int currentHealth;
+    //[SerializeField] private int curHealth;
+
 
     private void Start(){
-        maxHealth = health.getMaxStat();
-        currentHealth = maxHealth;
+        health.setMaxStat(50);
+        health.setCurrentStat(health.getMaxStat());
     }
     private void Update(){
-        statBar.fillAmount = currentHealth / maxHealth;
+        statBar.fillAmount = health.getCurrentStat() / health.getMaxStat();
+        Debug.Log( "Current Health - Update: " + (health.getCurrentStat() / health.getMaxStat()) );
     }
 
     public void SetHealth(int damageAmount){
-        currentHealth = Mathf.Clamp( (currentHealth - damageAmount) , 0, maxHealth);
+        health.setCurrentStat( Mathf.Clamp( (health.getCurrentStat() - damageAmount) , 0, health.getMaxStat()) );
+        Debug.Log("Current Health: " +health.getCurrentStat());
     }
 }

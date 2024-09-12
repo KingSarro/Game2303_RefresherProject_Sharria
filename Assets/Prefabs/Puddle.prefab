@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4300158206982173446}
   - component: {fileID: 4022011766315874771}
   - component: {fileID: 546454655236233578}
+  - component: {fileID: 5789755264736885526}
   m_Layer: 0
   m_Name: PuddleArea (3)
   m_TagString: Untagged
@@ -107,6 +108,20 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
+--- !u!114 &5789755264736885526
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 12160552542077939}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64aa8ba657970584b8b640bf134add71, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageAmount: 5
+  playerInTrigger: 0
 --- !u!1 &562659381423354998
 GameObject:
   m_ObjectHideFlags: 0
@@ -119,6 +134,7 @@ GameObject:
   - component: {fileID: 2455043998795228594}
   - component: {fileID: 4460733278471876165}
   - component: {fileID: 6321080682968157012}
+  - component: {fileID: 4916587510882688707}
   m_Layer: 0
   m_Name: PuddleArea (2)
   m_TagString: Untagged
@@ -214,6 +230,20 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
+--- !u!114 &4916587510882688707
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 562659381423354998}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64aa8ba657970584b8b640bf134add71, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageAmount: 5
+  playerInTrigger: 0
 --- !u!1 &1842216312364320288
 GameObject:
   m_ObjectHideFlags: 0
@@ -226,6 +256,7 @@ GameObject:
   - component: {fileID: 2606764860633256631}
   - component: {fileID: 5976413070769492714}
   - component: {fileID: 5647724827252530463}
+  - component: {fileID: 5939908266413630636}
   m_Layer: 0
   m_Name: PuddleArea (0)
   m_TagString: Untagged
@@ -321,6 +352,20 @@ CapsuleCollider:
   m_Height: 100.00002
   m_Direction: 1
   m_Center: {x: 0.000000059604645, y: 0, z: -0.00000011920929}
+--- !u!114 &5939908266413630636
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1842216312364320288}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64aa8ba657970584b8b640bf134add71, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageAmount: 5
+  playerInTrigger: 0
 --- !u!1 &3146168319276566476
 GameObject:
   m_ObjectHideFlags: 0
@@ -370,6 +415,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damageAmount: 5
+  playerInTrigger: 0
 --- !u!1 &7263136199841524053
 GameObject:
   m_ObjectHideFlags: 0
@@ -382,6 +428,7 @@ GameObject:
   - component: {fileID: 5390082351472962650}
   - component: {fileID: 3110703541429572228}
   - component: {fileID: 7296902932557347136}
+  - component: {fileID: 5941258693381874862}
   m_Layer: 0
   m_Name: PuddleArea (1)
   m_TagString: Untagged
@@ -477,3 +524,17 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
+--- !u!114 &5941258693381874862
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7263136199841524053}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64aa8ba657970584b8b640bf134add71, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageAmount: 5
+  playerInTrigger: 0
